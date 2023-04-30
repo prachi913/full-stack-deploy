@@ -4,13 +4,17 @@ const { userrouter } = require("./routes/userroute");
 
 const { auth } = require("./middleware/authmiddle");
 const { notesrouter } = require("./routes/noterouter");
-const cors = require("cors")
 require("dotenv").config()
+const cors = require("cors")
 
 const app = express();
 // hjklkjhghjk
 
-app.use(cors())
+app.use(
+  cors({
+    origin: ["https://www.section.io", "http://localhost:3000"]
+  })
+);
 
 app.use(express.json());
 app.get("/", (req, res) => {
