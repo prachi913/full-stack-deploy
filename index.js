@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://www.section.io", "http://localhost:3000"]
+    origin: ["https://www.section.io", "http://localhost:3001"]
   })
 );
 
